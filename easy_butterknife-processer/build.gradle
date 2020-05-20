@@ -1,0 +1,11 @@
+apply plugin: 'java-library'
+apply plugin: 'com.github.dcendents.android-maven'//启用JitPack插件
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':easy_butterknife-annotations')//依赖注解
+    implementation 'com.squareup:javapoet:1.12.1'//生成java代码库
+    implementation 'com.google.auto.service:auto-service:1.0-rc6'//自动注册注解器
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
